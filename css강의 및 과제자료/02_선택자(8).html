@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 선택자</title>
+    <style>
+        #container>p::first-letter{ font-size: 40px; color: greenyellow; }
+        #container>p::first-line{ background-color: gray;}
+        #container>p::after{ content: " -> end"; }
+        #container>p::before{ content: "start ->";}
+        #container>p::selection{background-color: yellow;color: blue;}
+    </style>
+</head>
+<body>
+    <h1>문자 선택자</h1>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>consectetur adipiscing elit</p>
+        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <p>Ut enim ad minim veniam</p>
+        <p>
+            Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <p>
+        id가 test인 div의 자손태그들의 
+        1. 문장의 첫글자를 size 20px로 변경하고, 굵게 변경해주세요. 
+        2. 문장의 마지막에 "종료"라는 글을 추가해주세요.
+        3. 문장을 드래그 했을때 배경색이 회색으로 변경되고, 
+            글자색이 하얀색으로 변경되도록 지정해주세요.
+    </p>
+    <style>
+        div#test>p::first-letter{font-size: 20px; font-weight: bold;}
+        div#test>p::after{content:"종료";}
+        div#test>p::selection{background-color: gray;color: white;}
+    </style>
+    <div id="test">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        <p>totam rem aperiam</p>
+        <p>eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</p>
+    </div>
+</body>
+</html>

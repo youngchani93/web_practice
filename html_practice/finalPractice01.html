@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finalPractice01</title>
+</head>
+<body>
+    <header>
+        <nav><h1 style="text-align: center;">HTML의 모든 것</h1></nav>
+    </header>
+    <section>
+        <!-- header안으로 들어가야한다. -->
+        <table border="1" align="center">
+            <tbody>
+                <tr>
+                    <td>글자&nbsp;&nbsp;</td>
+                    <td>목록&nbsp;&nbsp;</td>
+                    <td>표&nbsp;&nbsp;</td>
+                    <td>영역&nbsp;&nbsp;</td>
+                    <td>멀티미디어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <a href="welcome_page.html" target="_self">하이퍼링크</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>폼태그&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- label, input태그는 form태그 안에서 사용하는 것을 잊지말기! -->
+        <table align="center">
+                <tr>
+                    <td>
+                        <li>
+                            <label for="userName">이름 </label>
+                        </li>
+                    </td>
+                    <td>
+                        <input type="text" id="userName" name="user_name"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <li>
+                            <label for="userMail">이메일 </label>
+                        </li>
+                    </td>
+                    <td>
+                        <input type="email" id="userMail" name="user_mail"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>
+                            <label for="userPW">비밀번호 </label>
+                        </li>
+                    </td>
+                    <td>
+                        <input type="password" id="userPW" name="user_pw"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>
+                            <span>음식</span>
+                        </li>
+                    </td>
+                    <td>
+                        <select name="food">
+                            <option selected>한식</option>
+                            <option>중식</option>
+                            <option>일식</option>
+                            <option>양식</option>
+                        </select>
+                    </td>
+                </tr>
+            
+        </table>
+    </section>
+    <hr>
+    <footer>
+        <h1 style="text-align: center;">@CopyRight gn</h1>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그_exam(2)</title>
+</head>
+<body>
+    <form name="orderUserInfo" action="welcome_page.html">
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+                <li>
+                    <label for="user_name">납품자명 :</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="name"/>
+                </li>
+                <br>
+                <li>
+                    <label for="user_email">email :</label>
+                    <input type="email" id="user_email" name="user_email" placeholder="hkd@naver.com"/>
+                </li>
+                <br>
+                <li>
+                    <label for="user_hpaddr">납품자명 :</label>
+                    <input type="url" id="user_hpaddr" name="user_hpaddr" placeholder="http://"/>
+                </li>
+            </ol>
+    </fieldset>
+    <fieldset>
+        <legend>납품정보</legend>
+            <ul>
+                <li>
+                    <label for="productName">상품명 :</label>
+                    <input type="text" id="prod_name" name="produdct_name"/>
+                </li>
+                <br>
+                <li>
+                    <label for="productAmount">납품수량 :</label>
+                    <input type="number" id="prod_amount" name="product_amount" placeholder="최소 100"/>
+                </li>
+                <br>
+                <li>
+                    <span>납품등급 :</span>
+                    <input type="range" id="prod_level" name="product_level" value="2" min="1" max="3" step="1"/>
+                </li>
+                <br>
+                    <li>
+                    <span>기타사항 :</span>
+                    <textarea name="user_textarea" rows="3" cols="20"></textarea> 
+                    </li>
+            </ul>
+        </fieldset>
+        <br>
+        <input type="submit" id="order_btn" name="order_btn" value="send message"/>
+    </form>
+
+</body>
+</html>

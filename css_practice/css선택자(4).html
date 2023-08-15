@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css선택자(4)</title>
+    <style>
+        /* 자손선택자 container라는 클래스의 첫번째 h1만 css를 적용. */
+        .container > h1{
+            color: purple;
+            background-color: aqua;
+        }
+        /* 후손선택자 container 클래스 아래의 h1태그에 css를 전부 적용. */
+        .container h1{
+            color: orange;
+        }
+        .container a[href='css기초(1).html']{
+            background-color:black;
+        }
+        .container > div > ul > li > a {
+            color:chartreuse;
+        }
+        .container>.content{
+            color: blue;
+        }
+
+        /* section태그 이면서 .container 도 해당
+        section.container{
+
+        }
+        section tag 아래 후손 중 .container 클래스에 해당
+        section .container{ 
+
+        }*/
+    </style>
+</head>
+<body>
+    <div>
+        <h4>후손, 자손 선택자</h4>
+    </div>
+    <section class="container">
+        <!-- section내부의 첫번째 자손 h1태그 -->
+        <h1>첫째</h1>
+        <p class="content">
+            태그들은 계층 구조를 가지고 있어요.<br>
+            ex. 족보처럼!! 고조할아버지 - 증조할아버지 - 할아버지<br>
+            후손 : 지정한 태그 아래에 있는 모든 태그들 중에 선택된 태그<br>
+            자손 : 지정한 태그와 직접적으로 연결된 태그<br>
+        </p>
+        <div>
+            <h1>셋째의 자식</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>
+                    <a href="css기초(1).html">3</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

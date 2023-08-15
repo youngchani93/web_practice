@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그(2)</title>
+</head>
+<body>
+    <form name="testFrm">
+        <p>색상지정</p>
+        <input type="color" name="user_color" value="#FACBFB"/>
+        <P>월,주,시간</P>
+        <input type="month" name="user_month"/>
+        <input type="week" nmae="user_week"/>
+        <input type="date" name="user_date"/>
+        <input type="time" name="user_time"/>
+        
+        <!-- 텍스트 입력말고 무조건 숫자의 입력을 받아야 할 때 사용한다. -->
+        <p>number(숫자값)</p>
+        <input type="number" name="user_num" min="10" max="20" step="2"/>
+        <p>범위</p>
+        <input type="range" name="user_range" min="10" max="20" step="5"/>
+        <p>url</p>
+        <input type="url" name="user_url"/>
+        <input type="submit" value="제출"/>
+        <br>
+        <p>여러줄의 텍스트 입력</p>
+        <textarea name="user_textarea" rows="10" cols="50"></textarea>
+        <p>파일</p>
+        <input type="file" id="user_file" name="userFile" multiple/>
+        <p>선택</p>
+        <select name="userSelect" size="3" multiple>
+            <option value="1" selected>볶음밥</option>
+            <option value="2">김치볶음밥</option>
+            <option value="3">짬뽕</option>
+        </select>
+        <p>작업의 진행 상태</p>
+        <progress value="5" max="10"></progress>
+        <input type="reset" value="초기화"/>
+    </form>
+</body>
+</html>

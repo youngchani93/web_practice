@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 메뉴</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        header > h1 {
+            text-align : center;
+            color: darkorange;
+        }
+        /* 글자가 커지는 navbar */
+        .menu_grow > ul{
+            background-color: lavenderblush;
+            height: 80px;
+            display: flex;
+            /* 가로축 정렬 : 컨텐츠 끼리 일정 거리 */
+            justify-content: space-around;
+            /* 세로축 정렬 : 가운데 */
+            align-items: center;
+            /* li 태그 앞 점 제거 */
+            list-style-type: none;
+        }
+        .menu_grow>ul>li>a{
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bolder;
+            color:cornflowerblue;
+            /* 문자 사이에 간격 벌리기 */
+            letter-spacing: 10px;
+        }
+        .menu_grow>ul>li,.menu_grow>ul>li>a{
+            transition-property: color,transform;
+            transition-duration:1s;
+        }
+        .menu_grow>ul>li:hover{
+            transform: scale(1.5);
+        }
+        .menu_grow>ul>li>a:hover{
+            color: darkturquoise;
+        }
+        /* 글자가 뒤집히는 메뉴 */
+        .menu_flip > ul{
+            background-color: cornsilk;
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+        }
+        .menu_flip>ul>li{
+            font-family: "Gamja Flower";
+            font-size: 40px;
+            font-weight: bolder;
+            color:midnightblue;
+            letter-spacing: 5px;
+            cursor:pointer;
+        }
+        .menu_flip>ul>li:hover{
+            animation-name: mainMenu;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* 위에 네가지 합쳐서 한번에 쓸 수 있음 */
+            /* animation:mainMenu 0.5s infinite alternate; */
+        }
+        @keyframes mainMenu{
+            to{
+                transform: perspective(200px) rotate(360deg);
+                color:darkolivegreen;
+            }from{
+                transform: perspective(200px) rotate(0deg);
+                color:lightblue;
+            }
+        }
+        section#content{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        section#content > div.post{
+            flex: 0 1 25%;
+        }
+        div.pic{
+            text-align: center;
+        }
+
+        div.description>h4,
+        div.description>h5:not(:last-child){
+            text-align: center;
+        }
+        div.description>h5:last-child{
+            text-align: right;
+            margin-right: 10px;
+        }
+        aside#sideMenu{
+            background-color: olive;
+            color: cornsilk;
+            font-size: 1.1rem;
+        }
+        aside#sideMenu>ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height:500px;
+            width: 110px;
+            list-style-type: none;
+        }
+        aside#sideMenu>ul>li:hover{
+            cursor: pointer;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <!-- https://html-css-js.com/html/character-codes/icons/ -->
+        <h1>안녕하세요 김가남입니다&#128692;</h1>
+    </header>
+    <nav class="menu_grow">
+        <ul>
+            <li><a href="">메인화면</a></li>
+            <li><a href="">게시판</a></li>
+            <li><a href="">갤러리</a></li>
+            <li><a href="">자료실</a></li>
+        </ul>
+    </nav>
+    <!-- 웹 접근성을 위해 한 페이지에 nav 태그는 하나만 쓰는게 정석 -->
+    <!-- <nav class="menu_flip">
+        <ul>
+            <li>Home</li>
+            <li>Board</li>
+            <li>Gallary</li>
+            <li>WareHouse</li>
+        </ul>
+    </nav> -->
+    <section id="content">
+        <!-- <aside id="sideMenu">
+            <ul>
+                <li>Home</li>
+                <li>Board</li>
+                <li>Gallary</li>
+                <li>WareHouse</li>
+                <li>ETC</li>
+            </ul>
+        </aside> -->
+        <div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div>
+        <div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div><div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div><div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div><div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div><div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div><div class="post">
+            <div class="pic">
+                <img src="images/ddoong.png" alt="" width="200" height="200">
+            </div>
+            <div class="description">
+                <h4>뚱이 피규어</h4>
+                <h5>뚱이의 늠름한 피규어</h5>
+                <h5>10,000원</h5>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

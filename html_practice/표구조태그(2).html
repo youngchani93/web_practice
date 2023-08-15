@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표구조태그(2)</title>
+
+</head>
+<body>
+    <table border="1">
+        <caption>출장비용 보고서</caption>
+        <colgroup>
+            <col width="35%">
+            <col width="35%">
+            <col width="30%" style="background-color: rgb(241, 194, 231);">
+        </colgroup>
+        <thead>
+            <tr style="text-align: center;">
+                <th>대분류</th>
+                <th>중분류</th>
+                <th>금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="text-align: center;">
+                <td>교통비</td>
+                <td>ktx</td>
+                <td>100000</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td rowspan="2">식비</td>
+                <td>점심</td>
+                <td>20000</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>저녁</td>
+                <td>20000</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>숙박비</td>
+                <td>모텔</td>
+                <td>50000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr style="text-align: left;">
+                <td colspan="2">총합계</td>
+                <td>190000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

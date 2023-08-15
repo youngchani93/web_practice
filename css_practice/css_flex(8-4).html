@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <style>
+        .container{
+            background-color: lightblue; width: 500px; height: 200px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .item{
+            background-color: lightpink; margin:10px; height: 80px;
+
+        }
+        #flexStart{
+            /* default */
+            justify-content: flex-start; 
+        }
+        #flexEnd{
+            justify-content: flex-end;
+        }
+        #flexCenter{
+            justify-content: center;
+        }
+        #spaceB{
+            justify-content: space-between;
+        }
+        #spaceA{
+            justify-content: space-around;
+        }
+        #spaceE{
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>justify-content</h1>
+    <p>
+        가로축 정렬 <br>
+        1. flex-start : 시작 지점에 몰려서 간격 없이 정렬 <br>
+        2. flex-end : 끝 지점에 몰려서 간격 없이 정렬 <br>
+        3. center : 가운데 지점에 몰려서 간격 없이 정렬 <br>
+        4. space-between : 아이템들 사이 간격 일정하게 <br>
+        5. space-around : 아이템 둘레 간격이 일정하게 <br>
+        6. space-evenly : 아이템 사이와 양끝 간격 일정하게 <br>
+    </p>
+
+    <div class="container" id="flexStart">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="flexEnd">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="flexCenter">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="spaceB">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="spaceA">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="spaceE">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+</body>
+</html>

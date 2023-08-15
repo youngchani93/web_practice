@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 홈페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #e69fb1;
+            
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        nav > ul{
+            padding-top: 40px;
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+        }
+        nav > ul > li > a{
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bolder;
+            /* letter-spacing: 10px; */
+            color: #4a3238;
+            background-color: white;
+            padding-top: 5px;
+            padding: 12px 7px 7px 7px;
+            border: 6.5px solid #4a3238;
+        }
+        section{
+            background-color: white;
+            float: left;
+            display: block;
+            width: 80%;
+            height: 600px;
+            margin-left: 3%;
+            margin-top: 5%;
+            border: 6.5px solid #4a3238;
+        }
+        section > h1{
+            text-align: center;
+            font-size: 3rem;
+            color: #4a3238;
+        }
+        section > div#sentence > p{
+            text-align: right;
+            padding-right: 5%;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+        section > div#restaurant {
+            border : 6.5px solid #e69fb1;
+            width: 370px;
+            position: absolute;
+            left : 180px;
+            top: 400px;
+        }
+        section > div#restaurant > ul {
+            margin-left: 30px;
+            list-style-image: url('sponge_list.png');
+        }
+        section > div#restaurant > ul > li {
+            font-size: 2rem;
+        }
+        section > div#welcome{
+            position: absolute;
+            left: 480px;
+            top: 500px;
+        }
+        section > div#gif_div{
+            position: absolute;
+            right: 200px;
+            top: 500px;
+        }
+        section > div#song{
+            width: 300px;
+            position: absolute;
+            right: 600px;
+            top: 300px;
+            text-align: justify;
+            line-height: 50px;
+        }
+        aside{
+            background-color: white;
+            float: right;
+            height: 600px;
+            border: 6.5px solid #4a3238;
+            width: 210px;
+            margin-right: 2% ;
+            text-align: center;
+        }
+        aside #profile{
+            margin-top: 10%;
+            border-radius: 200px;
+        }
+        aside > p{
+            font-size: 2rem;
+        }
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">INTRODUCE</a> 
+                </li>
+                <li>
+                    <a href="#">HOBBY</a>  
+                </li>
+                <li>
+                    <a href="#">GALLERY</a> 
+                </li>
+                <li>
+                    <a href="#">WAREHOUSE</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>HOME</h1>
+        <div id="sentence">
+            <p>사랑해요~💕</p>
+        </div>
+        <div id="restaurant">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div id="welcome">
+            <img src="welcome.jpg" alt="뚱이와 스폰지밥이 인사하는 이미지">
+        </div>
+        <div id="gif_div">
+            <img src="AS000972_00.gif" alt="스폰지밥이 뛰어가는 이미지">
+        </div>
+        <div id="song">
+                I'm super shy, super shy
+                But wait a minute while I make you mine, make you mine
+                떨리는 지금도 you're on my mind all the time
+                I wanna tell you but I'm super shy, super shy
+                I'm super shy, super shy
+                But wait a minute while I make you mine, make you mine
+                떨리는 지금도 you're on my mind all the time
+                I wanna tell you but I'm super shy, super shy
+                And I wanna go out with you, where you wanna go?(Huh?)
+                Find a lil' spot, just sit and talk
+                Looking pretty, follow me
+        </div>
+    </section>
+    <aside>
+        <div>
+            <img id="profile" src="plankton.jpg" alt="플랑크톤 이미지" width="190" height="190">
+        </div>
+        <p>김가남</p>
+        <p>!!!게살버거!!!</p>
+    </aside>
+    <footer>
+        @copyright 김가남 2023
+    </footer>
+</body>
+</html>

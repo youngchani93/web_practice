@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그_exam(3)</title>
+</head>
+<body>
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p>HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <th>개인정보</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><lable for="user_name">이름</lable></td>
+                    <td><input type="text" id="user_name" name="UserName" value="공백없이 입력하세요." /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><label for="user_cpnum">연락처</label></td>
+                    <td><input type="text" id="user_cpnum" name="UserCellPhone" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>지원분야</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="radio" id="webP" name="dev_category" /></td>
+                    <td><label for="webP">웹 퍼블리싱</label></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="radio" id="webAD" name="dev_category" /></td>
+                    <td><label for="webAD">웹 애플리케이션 개발</label></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="radio" id="webDEA" name="dev_category" /></td>
+                    <td><label for="webDEA">개발 환경 개선</label></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>지원동기</th>
+                    <th></th>
+                    <th></th>
+                </tr>                
+                <tr>
+                    <td colspan="3">
+                        <textarea name="applyMemo" rows="5" cols="30" placeholder="지원 동기를 간략히 써주세요."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="sbmitBtn" name="submit_btn" value="접수하기"/></td>
+                    <td><input type="reset" id="resetBtn" name="reset_btn" value=다시쓰기></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

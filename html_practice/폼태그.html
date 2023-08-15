@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그</title>
+    <!-- 하나의 html안에서 id값은 같을 수 없다.
+    name값도 각 기능에 따라 구분하여 짓는데 체크박스와 같은 통합적인 범위를 설정 시 그룹의 이름으로 사용한다. -->
+</head>
+<body>
+    <!-- <form method="get/post" name="loginFrm/태그 고유의 이름" action="">
+    </form> -->
+    <h1>회원가입</h1>
+    <form method="post" action="welcome_page.html" target="_blank">
+        <h5>한줄짜리 텍스트</h5>
+        <label>
+            id:
+            <input type="text" name="user_id" placeholder="아이디를 입력하세요." maxlength="10"/>
+        </label>
+        <br>
+        <!-- 비밀번호 -->
+        <label for="user_pw">
+            pw:
+        </label>
+            <input type="password" id="user_pw" name="user_pw" placeholder="비밀번호를 입력하세요." minlength="5" maxlength="10"/>
+        <!-- 데이터베이스 개념에서 데이터 저장 no를 가지고 있는 값 -->
+        <br>
+        <label for="user_email">e-mail:</label>
+        <input type="email" id="user_email" placeholder="e-mail"/>
+
+        <br>
+        <!-- <label>
+            이메일:
+            <input type="email" name="user_email" placeholder="e-mail"/>
+        </label> -->
+        
+        <input type="hidden"name = "user_no"/>
+        <p>버튼생성</p>
+        <!-- 기본값을 설정하고 싶을 때 value 사용 -->
+        <input type="button" id="join_btn" name="joinBtn" value="login"/>
+        <p>범위선택</p>
+        <input type="range" min="0" max="10" step="1"/>
+
+        <p>성별(체크박스)</p>
+        <!-- checkbox의 default 값은 체크가 안된상태 
+        checkbox는 중복선택이 가능하다.-->
+        <input type="checkbox" name="user_gender" checked/>
+        남
+        <input type="checkbox" name="user_gender" checked/>
+        여
+        <input type="checkbox" name="user_gender" checked/>
+        알리고 싶지 않음
+        <!-- 여러 체크박스 중 하나만 선택가능한 속성 'radio' -->
+        <p>지역(라디오)</p>
+        <input type="radio" name="user_addr" id="seoul"/>
+        <label for="seoul">서울시</label>
+        <input type="radio" name="user_addr" id="gwangmyeong"/>
+        <label for="gwangmyeong">광명시</label>
+        <input type="radio" name="user_addr" id="bucheon"/>
+        <label for="bucheon">부천시</label>
+        <label>
+            <input type="radio" name="user_addr"/>
+            안양시
+        </label>
+        <!-- <input type="image" src="logo.png"/> -->
+        <input type="submit" value="전송"/>
+        <input type="reset" value="초기화"/>
+
+    </form>
+    <br><br>
+    <form>
+        <!-- 기능을 묶는것이 아니라 사용자 화면의 데이터자료를 묶어주는 역할 -->
+        <fieldset>
+            <!-- caption과 같은 기능 -->
+            <legend>사용자 정보 그룹</legend>
+                <label for="user_name">이름: </label>
+                <input type="text" id="user_name" placeholder="이름"/>
+                <br>
+                <label for="pw">비밀번호:</label>
+                <input type="password" id="pw"/>            
+        </fieldset>
+        <fieldset>
+            <legend>관리자 정보 그룹</legend>
+            <label>
+                아이디:
+                <input type="text" id="admin_id" placeholder="admin"/>
+            </label>
+            <br>
+            <label>
+                비밀번호:
+                <input type="password" id="admin_pw" placeholder="admin_password"/>
+            </label>
+        </fieldset>
+        <form>
+            <!-- 날짜 입력창 만들기 -->
+            <input type="date"/>
+            <input type="datetime-local"/>
+        </form>
+    </form>
+</body>
+</html>

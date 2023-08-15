@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지셔닝</title>
+</head>
+<body>
+    <h1>position 속성</h1>
+    <p>
+        태그를 페이지에서 원하는 위치에 배치할때 사용하는 속성<br>
+        기본적으로 태그는 순차적으로 배치를 합니다.<br>
+        static : 작성된 태그의 순서대로 배치(default)<br>
+        absolute : 부모의 position이 static일때 
+            페이지의 왼쪽 꼭지점에 0,0으로 설정<br>
+        relative : 부모의 position이 static일때 
+            부모의 왼쪽 꼭지점이 0,0으로 설정<br>
+        *부모가 absolute, relative일때는 모두 부모의 왼쪽 꼭지점이 0,0<br>
+        fixed : 태그의 위치를 특정 위치로 고정하는 속성
+
+    </p>
+    <style>
+        .parent{
+            border: 1px solid blue; width: 800px;
+            height: 500px; margin: 100px;
+        }
+        .absolute_child{
+            border: 2px dashed darkorange;
+            width: 200px; height: 200px;
+            position : absolute;
+            top: 40px; left: 50px;
+            /* bottom:100px; right: 50px; */
+        }
+        .relative_child{
+            border: 4px double green;
+            width: 80px; height: 200px;
+            position: relative;
+            top:40px; left: 50px;
+        }
+        #fly{
+            position: fixed;
+            top: 200px;
+            left: 500px;
+        }
+        #fly2{
+            position: fixed;
+            top: 200px; left: 500px;
+        }
+    </style>
+    <div class="parent">
+        <div class="absolute_child">포지션이 absolute라면?
+            <div>
+                <div style="position: relative;">
+
+                </div>
+            </div>
+        </div>
+        <div class="relative_child">relative도 있다!!</div>
+        <img id="fly" src="img/sponge_list.png" alt="스폰지밥 이미지"/>
+    </div>
+    <!-- ul태그의 id를 fly2로 지정하고, 
+        id가 fly2인 ul태그의 position을 고정
+        위치는 위를 기준으로 200px 왼쪽을 기준으로 500px -->
+    <ul id="fly2">
+        <li>라멘</li>
+        <li>부대찌개</li>
+        <li>구내식당</li>
+    </ul>
+    <h1>visibility 속성</h1>
+    <p>
+        display : none => 화면에 표현되지도 않고, 공간도 차지하지 않았음.
+        visibility : hidden => 화면에 표현되지는 않지만, 공간은 차지하고 있음.
+    </p>
+    <style>
+        div#enrollPage input{ display: block;}
+        div#enrollFrm>div{display: inline-block;}
+        #userId_validate{visibility: hidden;}
+    </style>
+    <div id="enrollFrm">
+        <div id="enrollPage">
+            <h2>회원가입</h2>
+            <form>
+                <input type="text" name="userId" id="userId" placeholder="아이디"/>
+                <span id="userId_validate">잘못된 아이디입니다.</span>
+                <input type="password" name="userPw" placeholder="비밀번호"/>
+                <input type="password" name="userPwCheck" placeholder="비밀번호 확인"/>
+                <input type="text" name="userName" placeholder="이름"/>
+                <input type="submit" value="회원가입"/>
+            </form>
+        </div>
+        <div id="memberStatus">
+            <ul>
+                <li>회원수 : 100</li>
+                <li>현재 접속자 : 10</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('userId').onkeyup = function(){
+            if(document.getElementById('userId').value === 'user01'){
+               //document.getElementById('userId_validate').innerHTML = '이미 존재하는 아이디다!!';
+                document.getElementById('userId_validate').style.visibility = 'visible';
+            }
+        }
+    </script>
+    <h1>z-index</h1>
+    <p>
+        태그가 중첩되어 있을 때 우선순위를 설정하는 속성
+    </p>
+    <style>
+        .zindex-container > div{width: 100px; height: 100px;}
+        .zindex-container{ position:relative; height: 300px; border: 1px solid red;}
+        .z1{
+            background-color: lime; position: absolute;
+            top: 10px; left: 10px; 
+        }
+        .z2{
+            background-color: orangered; position: absolute;
+            top: 30px; left:30px; z-index: -1;
+        }
+        .z3{
+            background-color: lightgoldenrodyellow; position: absolute;
+            top: 50px; left: 50px; 
+        }
+    </style>
+    <div class="zindex-container">
+        <div class="z1">첫째</div>
+        <div class="z2">둘째</div>
+        <div class="z3">셋째</div>
+    </div>
+    <h1>float로 요소 배치</h1>
+    <p>
+        태그를 왼쪽, 오른쪽으로 배치해주는 속성
+        clear : 페이지에 float 설정이 되어있을 때 다음 요소에 미치는 영향을 초기화
+    </p>
+    <style>
+        .float_container{border: 1px solid gray; width: 600px; height: 400px;}
+        .float_container>div{width: 100px; height: 100px;}
+        .left{border: 2px dashed violet; float: left; margin-left : 10px;}
+        .right{border: 4px double dodgerblue; float: right; margin-right:10px;}
+        .clear{clear:both; border: 2px solid orange;}
+    </style>
+    <div class="float_container">
+        <div class="left">left</div>
+        <div class="left">추가 left</div>
+        <div class="right">right</div>
+        <div class="right">추가 right</div>
+        <div class="clear">추가하는 태그</div>
+    </div>
+
+    <div style="border: 1px solid salmon;">
+        <div style="border: 1px solid red;float: left;">1</div>
+        <div style="border: 1px solid orange;">
+            2
+            <div style="background-color: rebeccapurple;">4</div>
+        </div>
+        <div>3</div>
+    </div>
+</body>
+</html>

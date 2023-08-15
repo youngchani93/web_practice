@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_example(1)</title>
+</head>
+<body>
+    <table border="1" name="class_signup">
+        <thead style="text-align: center;">
+            <tr>
+                <th>관</th>
+                <th>강의장</th>
+                <th>인원수</th>
+                <th>강의명</th>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <!-- 2행1열 -->
+            <tr>
+                <td rowspan="6">1관</td>
+                <td rowspan="2">I강의장</td>
+                <td rowspan="2">30명</td>
+                <td>오전 : 김철수
+                    <!-- 단일태그의 경우 종료 태그가 없으므로 태그 내 value에 입력값을 넣어준다. -->
+                    <input type="button" id="btn1" name="btn1" value="신청하기"/>
+                    <!-- <button>신청하기</button> -->
+                </td>
+            </tr>
+            <tr>
+                <td>오후 : 김철수
+                    <input type="button" id="btn2" name="btn2" value="신청하기"/>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">G강의장</td>
+                <td rowspan="2">23명</td>
+                <td>오전 : 최영희
+                    <input type="button" id="btn3" name="btn3" value="신청하기"/>
+                </td>
+            </tr>
+            <tr>
+                <td>오전 : 최영희
+                    <input type="button" id="btn4" name="btn4" value="신청하기"/>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">H강의장</td>
+                <td rowspan="2">27명</td>
+                <td>오전 : 홍길동
+                    <input type="button" id="btn5" name="btn5" value="신청하기"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>오후 : 홍길동
+                    <input type="button" id="btn6" name="btn6" value="신청하기"/> 
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">많이 신청해주세요!</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+</html>

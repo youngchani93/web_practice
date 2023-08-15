@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <style>
+        .fontfamily{ font-family: '궁서';}
+        .webfont{font-family: 'Black Han Sans', sans-serif;}
+        div#sizecontainer > p:first-child{
+            font-size: 0.5em;
+        }
+        div#sizecontainer{
+            font-size: 20px;
+        }x
+        div#sizecontainer > p:last-child{
+            font-size: 0.5rem;
+        }
+        /* html{
+            font-size: 80px;
+        } */
+        .normal{font-weight: normal;}
+        .bold{font-weight: bold;}
+        .bolder{font-weight:bolder ;}
+        .lighter{font-weight: lighter;}
+        .weight{font-weight: 900;}
+    </style>
+</head>
+<body>
+    <h1>글꼴 설정하는 법</h1>
+    <p>font-family를 사용한다
+        기본 글꼴을 확인해봅시다.
+    </p>
+    <p class="fontfamily">나는 진지하다.</p>
+    <p class="webfont">웹폰트 적용하기</p>
+    <div id="sizecontainer">
+        <p>em으로 글자크기 설정하기</p>
+        <p>
+            부모태그의 글꼴이 10px이다. <br>
+            자식태그의 글꼴을 1em이라고 설정했다 <br>
+            그러면 자식태그의 글꼴은 몇 em일까요? 10px <br>
+
+            부모 태그 글꼴 : 10px <br>
+            자식태그의 글꼴이 1.5em -> 15px
+        </p>
+        
+
+        <p>rem으로 글자크기 설정하기</p>
+        <p>
+            root(html)의 글자크기 기준으로 태그의 글꼴이 결정 <br>
+            기본 html 글꼴 : 16px <br>
+            ex. 2rem -> 32px이 된다.
+        </p>
+    </div>
+    <br>
+    <h1>문자의 굵기 변경하기</h1>
+    <p>
+        font-weight : normal, ligther, bold, bolder, 100~900
+    </p>
+    <p class="normal">normal한 애</p>
+    <p class="bold">bold한 애</p>
+    <p class="bolder">bolder한 애</p>
+    <p class="lighter">lighter한 애</p>
+    <p class="weight">3대 몇치니...? </p>
+    <br>
+    <h1>글자 기울기 표시하기</h1>
+    <style>
+        .italic{font-style: italic;}
+        .textcolor{color:rgb(48, 158, 209);}
+        .under{text-decoration: underline;}
+        .over{text-decoration: overline;}
+        .through{text-decoration: line-through;}
+        .none{text-decoration: none; color:black;}
+    </style>
+    <p class="italic">글자를 기울여서 표시하기</p>
+    <h1>글자 색상 설정하기</h1>
+    <p class="textcolor">글자색상을 설정해보자</p>
+    <br>
+    <h1>단어, 문장에 스타일 주기</h1>
+    <p>
+        text-decoration 속성을 설정하면 됩니다.<br>
+        none : 아무것도 표시하지 않을 때
+        underline : 밑줄 표시<br>
+        overline : 윗줄표시<br>
+        line-through : 사선표시
+    </p>
+    <p class="decoration">
+        <span class="under">Lorem ipsum dolor sit amet</span><br><br>
+        <span class="over">Lorem ipsum dolor sit amet</span><br>
+        <span class="through">Lorem ipsum dolor sit amet</span>
+    </p>
+    <a href="https://www.gdu.co.kr/main/main.html" class="none">구디아카데미</a>
+    <h1>영문자를 변경해주는 스타일</h1>
+    <style>
+        .cap{text-transform: capitalize;}
+        .upper{text-transform: uppercase;}
+        .lower{text-transform: lowercase;}
+    </style>
+    <ul>
+        <li class="cap">Hello CSS how are you?i'm fine thank you and you?</li>
+        <li class="upper">Hello CSS how are you?i'm fine thank you and you?</li>
+        <li class="lower">Hello CSS how are you?i'm fine thank you and you?</li>
+    </ul>
+    <h1>텍스트 그림자 설정</h1>
+    <style>
+        #textshadow > .textshadow_p{
+            color: magenta;
+            /* 가로 세로 번짐 색상 */
+            text-shadow: 3px 3px 1px orange;
+            
+        }
+    </style>
+    <div id="textshadow">
+        <p>텍스트에 그림자 설정 안하기</p>
+        <p class="textshadow_p">텍스트에 그림자를 넣어보자</p>
+    </div>
+    <h1>공백을 처리해주는 속성</h1>
+    <style>
+        .con{
+            border: 1px solid darkred;
+            width: 300px;
+        }
+        /* 긴 글이 쓰여질 수 있는 공간에 set로 사용한다. */
+        .nowrap{white-space: nowrap;
+                    /* overflow:hidden;
+                    text-overflow: ellipsis;*/}
+        .pre{white-space: pre;}
+        .preline{white-space: pre-line}
+        .prewrap{white-space: pre-wrap;}
+    </style>
+    <p>
+        normal : 기본 default 띄어쓰기를 한개만 인정<br>
+        nowrap : 한 줄로 표시해주는 기능<br>
+        pre : 작성된대로 출력을 그대로 해준다<br>
+        pre-line : 영역을 벗어나는 부분을 개행처리 해준다 여러개의 공백을 하나로 표시<br>
+        pre-wrap : 영역을 벗어나는 부분을 개행처리하고, 여러개의 공백을 있는 그대로 표시
+    </p>
+    <!-- con과 nowrap이라는 두개의 클래스가 적용 -->
+    <div class="con nowrap">
+        동해물과 백두산이                     마르고 닿도록 하느님이 보우사하 우리나라 만세 
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+    </div>
+    <div class="con pre">
+        동해물과 백두산이                     마르고 닿도록 하느님이 보우사하 우리나라 만세 
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+    </div>
+    <div class="con preline">
+        동해물과 백두산이                     마르고 닿도록 하느님이 보우사하 우리나라 만세 
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+    </div>
+    <div class="con prewrap">
+        동해물과 백두산이                     마르고 닿도록 하느님이 보우사하 우리나라 만세 
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+    </div>
+    <h1>문자간 거리, 단어 사이의 거리 설정</h1>
+    <p>
+        letter-spacing : 문자 사이의 거리를 설정
+        word-spacing : 띄어쓰기 간격을 조정하는 설정
+    </p>
+    <style>
+        /* 문자 간 거리 */
+        .letter{
+            letter-spacing: 10px;
+        }
+        /* 단어사이의 거리 */
+        .word{
+            word-spacing: 30px;
+        }
+    </style>
+    <h3>재밌는 CSS 우리는 할 수 있다.</h3>
+    <h3 class="letter">재밌는 CSS 우리는 할 수 있다.</h3>
+    <h3 class="word">재밌는 CSS 우리는 할 수 있다.</h3>
+</body>
+</html>

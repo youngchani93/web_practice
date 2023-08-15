@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formTag_review</title>
+    <style>
+        *{
+            color: purple;
+            font-size: 15;
+        }
+        p{
+            font-family: 'D2Coding';
+        }
+        .name{
+            background-color: aquamarine;
+        }
+        #only{
+            background-color: blanchedalmond;
+        }
+        a[href="finalPractice01_answer.html"]{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        css를 추가하는 방법<br>
+        1.태그 옆에 style속성을 이용<br>
+        2.head에 style태그로 추가<br>
+        3.외부 css를 link로 가져오는 방법<br>
+    </p>
+    <p>4.전체선택자, 태그선택자</p>
+    <p>5.아이디 선택자, 클래스 선택자</p>
+    <a href="finalPractice01_answer.html">a태그 텍스트</a>
+    <ol>
+        <li class="name">1</li>
+        <li id="only">2</li>
+        <li class="name">3</li>
+    </ol>
+
+    <form>
+        <input type="color" name="user_color" value="#ffffff"/>
+        <input type="color" name="user_color" value="#000000"/>
+        <br>
+        <input type="month" style="background-color: blueviolet;" name="user_month" />
+        <input type="week" name="user_week" />
+        <input type="time" name="user_time" />
+        <br>
+        <input type="number" name="user_number" min="0" max="10" step="2" />
+        <br>
+        <input type="range" name="user_range" />
+        <br>
+        <input type="submit" value="전송" />
+        <br>
+        <select name="user_menu" size="3" multiple>
+            <option value="-1">선택</option>
+            <option value="1">짜장면</option>
+            <option value=2>짬뽕</option>
+        </select>
+        <br>
+        <div>
+            <textarea name="user_text" cols="25"></textarea>
+        </div>
+        <progress max="10" value="8"></progress>
+        <button>
+            버튼
+        </button>
+    </form>
+</body>
+</html>

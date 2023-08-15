@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <style>
+        .container{
+            background-color: lightblue; width:300px; height: 300px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        .item{
+            background-color: lightpink;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>align-items</h1>
+    <p>
+        세로축 정렬 <br>
+        1. stretch : 수직 방향으로 아이템이 늘어난다. <br>
+        2. flex-start : 시작점 기준으로 정렬한다. <br>
+        3. flex-end : 끝점 기준으로 정렬한다. <br>
+        4. center : 가운데 기준으로 정렬한다. <br>
+        5. baseline : 베이스라인 기준 정렬한다. <br>
+    </p>
+
+    <div class="container" style="align-items: stretch;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" style="align-items: flex-start;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" style="align-items: flex-end;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" style="align-items: center;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <!-- baseline => 글자들을 잇는 선 -->
+    <div class="container" style="align-items: baseline;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <!-- flex-start와 baseline과 비슷하다고 생각하겠지만 시작점이 다르다. -->
+</body>
+</html>

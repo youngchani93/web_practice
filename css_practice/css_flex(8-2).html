@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction(8-2)</title>
+    <style>
+        .container{
+            background-color: lightblue; width: 600px; height:200px;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .item{
+            background-color: lightpink;
+            margin: 2%; text-align: center;
+            /* root font-size의 2배 -> 16*2 => 32px */
+            font-size: 2rem;
+            color: #fff; height: 80px;
+        }
+        .container#row{
+            /* flex-direction의 default는 row이다. */
+            flex-direction: row;
+        }
+        .container#row_reverse{
+            flex-direction: row-reverse;
+        }
+        .container#column{
+            flex-direction: column;
+        }
+        .container#column_reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-direction</h1>
+    <p>
+        배치 방향을 설정한다. <br>
+        1. row : 가로로 배치 <br>
+        2. row-reverse : 역방향 가로로 배치 <br>
+        3. column : 세로로 배치 <br>
+        4. column-reverse : 역방향 새로로 배치 <br>
+
+    </p>
+    <h2>row</h2>
+    <div class="container" id="row">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <h2>row-reverse</h2>
+    <div class="container" id="row_reverse">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <h2>column</h2>
+    <div class="container" id="column">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <h2>column-reverse</h2>
+    <div class="container" id="column_reverse">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+</body>
+</html>

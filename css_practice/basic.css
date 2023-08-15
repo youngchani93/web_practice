@@ -1,0 +1,6 @@
+p{
+    font-family: "궁서";
+    background-color: blue !important;
+    color: white;
+    /* !important : 다른 것보다 우선순위로 적용을 하겠다 */
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="background-color:floralwhite;" name="orderHearder">
+    <h1 style="text-align: center;">Welcome Youngchan Pizza Store!!</h1>
+    <hr>
+    </form>
+    <form>
+        <fieldset>
+            <legend>고객정보</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="user_name">고객명:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="user_name" name="user_name" placeholder="이름을 입력하세요."/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="user_phone">전화번호:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="user_phone" name="user_phone" placeholder="전화번호를 입력하세요."/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="user_mail">E-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="user_mail" num="user_mail" placeholder="abc@example.com"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+                <label for="small">Small</label>
+                    <input type="radio" id="small" name="pizza_size" value="1"/>
+                <label for="midium">Medium</label>
+                    <input type="radio" id="medium" name="pizza_size" value="2"/>
+                <label for="large">Large</label>
+                    <input type="radio" id="large" name="pizza_size" value="3"/>
+                <!-- <label>
+                    <input type="radio" id="small" name="pizza_size" value="1"/>Small
+                </label>
+                <br>
+                <label>
+                    <input type="radio" id="medium" name="pizza_size" value="2"/>Medium
+                </label>
+                <br>
+                <label>
+                    <input type="radio" id="large" name="pizza_size" value="3"/>Large
+                </label> -->
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 베이컨
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 치즈
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 양파
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 버섯
+            </label> 
+        </fieldset>
+        
+    </form>
+    <br>
+    <label>
+        희망 배송 시간 <input type="time" id="order_time" name="order_time"/>
+    </label>
+    <br><br>
+    <input type="button" id="order_btn" name="order_btn" value="주문하기"/>
+    <br><br>
+    <img src="pizza.jpg" alt="pizza" width="350px" height="350px" class="center">
+    <!-- <form name="orderFrm">
+        <fieldset>
+            <legend>고객정보</legend>
+            <tabel>
+            <tr>
+                <td>
+                    <label>고객명:            
+                        <input type="text" id="user_name" name="user_name"/>
+                    </label>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                <label>전화번호:            
+                    <input type="text" id="user_pno" name="user_pno"/>
+                </label>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+            <label>E-mail:            
+                <input type="email" id="user_mail" name="user_email"/>
+            </label>
+            </td>
+            </tr>
+            </table>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <label>
+                <input type="radio" name="pizza_size"/> Small
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pizza_size"/> Medium
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pizza_size"/> Large
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 베이컨
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 치즈
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 양파
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="pizza_topping"/> 버섯
+            </label>
+            <br>
+        </fieldset>
+        <br>
+        <label>
+            희망 배송 시간:
+            <input type="time"/>
+        </label>
+        <br><br>
+        <input type="button" name="order_btn" value="주문하기"/>
+        <br><br>
+        <img src="pizza.jpg" alt="pizza" width="350px" height="350px" class="center">
+    </form> -->
+    
+</body>
+</html>

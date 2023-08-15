@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 속성 선택자</title>
+    <style>
+        input[type="text"]{
+            background-color: blueviolet;
+        }
+        a[href^='www']{
+            background-color: aquamarine;
+        }
+        a[href|='www']{
+            color: magenta;
+        }
+        a[href$='naver']{
+            font-size: 2em;
+        }
+        a[href*='ww']{
+            text-decoration:none;
+        }
+        a[href~='www']{
+            font-family: '궁서';
+        }
+    </style>
+</head>
+<body>
+    <h1>문자열 속성 선택자</h1>
+    <h2>태그에 설정된 속성, 속성값으로 태그를 찾아서 style을 적용</h2>
+    <ol>
+        <li> = : 동일한 값을 찾을 때</li>
+        <li>^= : 시작하는 문자가 동일한 값을 찾을 때</li>
+        <li>|= : -를 기준으로 동일한 값을 찾을 때</li>
+        <li>$= : 끝나는 문자가 동일한 값을 찾을때</li>
+        <li>*= : 포함된 값을 찾을 때</li>
+        <li>~= : 띄어쓰기를 기준으로 동일한 값을 찾을 때</li>
+    </ol>
+    <style>
+        img[src$='png']{
+            border: 4px solid salmon;
+        }
+    </style>
+    <img src="../friendship.jpg" width="400" height="200">
+    <img src="../sponge.png" width="200"/>
+
+    <p>속성값이 정확히 www인 태그나 
+        www바로 다음에 하이픈으로 시작하는 요소
+    </p>
+    <form>
+        <label for="user_id">아이디</label>
+        <input type="text" id="user_id"/><br>
+        <label for="user_pw">비밀번호</label>
+        <input type="password" id="user_pw"/>
+    </form>
+    <div>
+        <a href="www naver">www naver</a><br>
+        <a href="ww naver">ww naver</a><br>
+        <a href="naver www">naver www</a><br>
+        <a href="wwwn aver">wwwn aver</a><br>
+        <a href="wwwn naver www naver">wwwn naver www naver</a>
+    </div>
+    <div>
+        <a href="www-naver">www-naver</a>
+        <a href="ww-naver">ww-naver</a>
+        <a href="naver-www">naver-www</a>
+        <a href="wwwn-aver">wwwn-aver</a>
+        <a href="wwwn-naver-www-naver">wwwn-naver-www-naver</a>
+    </div>
+    <!-- 
+        폼태그를 생성하고, 
+        폼태그에 email type, password type, 
+        number type, text type input 태그를 추가한 다음.
+        type이 email인 input 태그의 배경색은 skyblue
+        type이 password인 input 태그의 배경색은 crimson 
+     -->
+    <style>
+        input[type='email']{
+            background-color: skyblue;
+        }
+        input[type="password"]{
+            background-color: crimson;
+        }
+    </style>
+    <form name="userFrm">
+        <fieldset>
+            <legend>사용자정보</legend>
+            <label for="user_email">이메일</label>
+            <input type="email" id="user_email" name="user_email"><br>
+            <label for="user_pw">비밀번호</label>
+            <input type="password" id="user_pw" name="user_pw"/><br>
+            <label for="user_level">사용자등급</label>
+            <input type="number" id="user_level" name="user_level"/>
+            <label for="user_info">사용자 정보</label>
+            <input type="text" id="user_info" name="user_info">
+        </fieldset>
+    </form>
+
+
+
+
+
+     <!-- <style>
+        input[type='email']{ background-color: skyblue; }
+        input[type='password']{ background-color: crimson; }
+    </style> -->
+    <form>
+        <label for="user_email">이메일</label>
+        <input type="email" id="user_email" name="user_email"/>
+        <br>
+        <label for="user_pw">비밀번호</label>
+        <input type="password" id="user_pw" name="user_pw"/>
+        <br>
+        <label for="user_num">사용자레벨</label>
+        <input type="number" id="user_num" name="user_num"/>
+        <br>
+        <label for="user_text">기타</label>
+        <input type="text" id="user_text" name="user_text">
+    </form>
+</body>
+</html>

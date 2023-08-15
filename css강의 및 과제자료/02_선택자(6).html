@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응 선택자, 상태 선택자</title>
+    <style>
+        #reaction>p#p1:active{
+            background-color: magenta;
+        }
+        #reaction>p#p2:hover{
+            color: hotpink;
+            font-size: 40px;
+        }
+        #condition > input[name='gender']:checked{
+            box-shadow: 0 0 0 3px lime;
+        }
+        #condition > input[name='user_id']:focus{
+            box-shadow: 0 0 0 3px blueviolet;
+        }
+        #condition > input[type='text']:disabled{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>반응선택자란?</h1>
+    <div id="reaction">
+        <p id="p1">마우스를 클릭하면 배경색 변경</p>
+        <p id="p2">마우스를 올리면 글자색 변경</p>
+    </div>
+    <h1>상태 선택자란?</h1>
+    <div id="condition">
+        <input type="text" name="user_id"/>
+        <label for="male">남</label>
+        <input type="checkbox" name="gender" id="male"/>
+        <input type="text" name="user_name" disabled/>
+    </div>
+
+    <!-- 
+        버튼 2개 만드시고, (button, input type button 상관X) 
+        각각 버튼마다 아이디 부여하시고
+        첫번째 버튼을 hover 했을때 배경색 변경
+        두번째 버튼은 active 했을때 배경색 변경
+    -->
+    <style>
+        #btn1:hover{
+            background-color: aquamarine;
+        }
+        #btn2:active{
+            background-color: aliceblue;
+        }
+    </style>
+    <button id="btn1">1번 버튼</button>
+    <button id="btn2">2번 버튼</button>
+</body>
+</html>

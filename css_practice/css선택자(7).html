@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반 구조 선택자, 형태 구조 선택자</title>
+    <style>
+        /* 일반 구조 선택자 $현업에서 일반 구조 선택자를 주로 사용$ */
+        table tr:first-child{
+            background-color: chartreuse;
+        }
+        table tr:last-child{
+            background-color: gray;
+        }
+        table tr:nth-child(2){
+            background-color: orange;
+        }
+        table tr:nth-child(3) td:last-child{
+            background-color: skyblue;
+        }
+
+        /* 형태 구조 선택자 */
+        table tr:first-of-type{
+            color: violet;
+        }
+        table tr:last-of-type{
+            color:white;
+        }
+        table tr:nth-of-type(2){
+            color: aqua;
+        }
+        table tr:nth-of-type(3) td:last-of-type{
+            color: red;
+        }
+        /* 예제문제 */
+        ul > li:first-child{
+            background-color: red;
+        }
+        ul > li:nth-child(2){
+            background-color: black;
+            color:white;
+        }
+        ul > li:nth-child(3) li:nth-child(3){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>사는곳</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td>윤영찬</td>
+            <td>광명</td>
+            <td>01011111111</td>
+        </tr>
+        <tr>
+            <td>윤영찬</td>
+            <td>부천</td>
+            <td>01011112222</td>
+        </tr>
+        <tr>
+            <td>윤영찬</td>
+            <td>시흥</td>
+            <td>01011113333</td>
+        </tr>
+        <!-- 예제문제 -->
+    </table>
+    <p>
+        1.ul 태그의 자식 태그인 li태그 중에서 첫번째 자식을 빨간색 배경<br>
+        2.ul 태그의 자식 태그인 li태그 중에서 두번째 자식을 검정색 배경화면에 하얀색 글씨로 변경<br>
+        3.ul 태그의 세번째 자식 태그인 li 태그의 자식 태그중에서 세번째 자식을 초록색 배경으로 조정 
+    </p>
+    <ul>
+        <li>한식</li>
+        <li>중식</li>
+        <li>양식
+            <ol>
+                <li>스파게티</li>
+                <li>리조또</li>
+                <li>샐러드</li>
+            </ol>
+        </li>
+        <li>일식</li>
+    </ul>
+    
+
+</body>
+</html>

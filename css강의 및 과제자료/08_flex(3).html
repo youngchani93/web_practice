@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap</title>
+    <style>
+        .container{
+            background-color: lightblue; width: 200px; height: 800px;
+            display: flex;
+        }
+        .item{
+            background-color: coral; margin: 10px; height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        flex-wrap : 컨테이너가 아이템을 담을 여유 공간이 없을 때 아이템 줄바꿈 설정<br>
+        1. nowrap : 넘치는 만큼 컨테이너를 빠져나간다.
+        2. wrap : 다음 줄로 넘어가서 컨테이너가 감싸준다.
+        3. wrap-reverse : 줄바꿈은 해주지만, 아이템을 역순으로 배치한다.
+    </p>
+    <h1>nowrap</h1>
+    <p>
+        flex-flow  = flex-direction + flex-wrap;
+        표기법 => flex-flow : flex-direction값 flex-wrap의값;
+    </p>
+    <!-- flex-wrap:nowrap;flex-direction: row-reverse; -->
+    <div class="container" style="flex-flow:row-reverse nowrap;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+        <div class="item">40</div>
+        <div class="item">50</div>
+        <div class="item">60</div>
+    </div>
+    <h1>wrap</h1>
+    <div class="container" style="flex-wrap:wrap;flex-direction:row-reverse">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+        <div class="item">40</div>
+        <div class="item">50</div>
+        <div class="item">60</div>
+    </div>
+    <h1>wrap-reverse</h1>
+    <div class="container" style="flex-wrap:wrap-reverse;">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+        <div class="item">40</div>
+        <div class="item">50</div>
+        <div class="item">60</div>
+    </div>
+</body>
+</html>

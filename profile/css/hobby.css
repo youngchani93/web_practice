@@ -1,0 +1,33 @@
+.image-container{
+    background-image: url(../images/bg-favorit.jpg);
+}
+
+body > header > div > ul > li:nth-child(2) > a{
+    color: #e0e721;
+}
+
+
+#content1 div {
+  width: 50%;
+  font-size: 2.5rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+#content1 img {
+    width: 100%;
+  /* width: 500px; */
+  /* width: 70%; */
+  /* padding: 5px; */
+  /* margin: 1rem 0; */
+}
+
+#image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-container div > image {
+}

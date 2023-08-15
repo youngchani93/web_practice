@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손, 자손 선택자</title>
+    <style>
+        /* 자손 선택자 */
+        .container > h1{
+            background-color: aqua;
+        }
+        /* 후손 선택자 */
+        .container h1{
+            color: darkorange;
+        }
+        .container>div>ul>li>a {
+            color: brown;
+        }
+        .container a[href='01_css기초.html']{
+            background-color: cornflowerblue;
+        }
+
+        .container>.content{
+            color: antiquewhite;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>첫째</h1>
+        <p class="content">
+            태그들은 계층 구조를 가지고 있어요.<br>
+            족보처럼!! 고조할아버지 - 증조할아버지 - 할아버지<br>
+            후손 : 지정한 태그 아래에 있는 모든 태그 들 중에 선택된 태그<br>
+            자손 : 지정한 태그와 직접적으로 연결된 태그
+        </p>
+        <div>
+            <h1>셋째의 자식</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>
+                    <a href="01_css기초.html">3</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 
+        0. css폴더 안에 img라는 폴더를 생성하시고, 이미지를 img 폴더 안에 추가해주세요.
+        1. id가 parent인 div의 자식 중에 
+            class가 child인 div의 자식 중에
+            h1 태그의 배경색을 강렬하게 변경하세요. 
+        2. ol태그의 후손중에 
+            class가 sprout인 span태그의 배경색을 노랗게 변경하세요.
+     -->
+    <style>
+        div#parent > div.child > h1{
+            background-color: crimson;
+        }
+        ol span.sprout{
+            background-color: yellow;
+        }
+    </style>
+    <div id="parent">
+        <div class="child">
+            <h1>콩나물 무침</h1>
+            <img src="img/kong.jpg" width="300" height="300"/>
+            <ol>
+                <li>
+                    씻은 <span class="sprout">콩나물</span>을 웍에 넣습니다.
+                </li>
+                <li>고춧가루,간장,설탕을 살포시 뿌려주시고요</li>
+                <li>파,마늘까지 얹어주세요.</li>
+                <li>타지않도록 물5스푼 넣고, 들기름을 팬 가장자리로 쭉 두릅니다. 뚜껑덮고 센불에 3분정도</li>
+                <li>뚜껑 열고,콩나물을 중불로 3분정도 볶아주세요~~</li>
+                <li><span class="sprout">콩나물</span>무침 완성입니다~~</li>
+            </ol>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

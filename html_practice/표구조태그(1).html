@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표구조태그(1)</title>
+</head>
+<body>
+    <table border="1">
+        <caption>표 설명</caption>
+
+        <!-- 표 전체를 컨트롤 하고 싶을 때 -->
+        <colgroup>
+            <col width="30%" style="background-color: aquamarine;">
+            <col width="70%">
+        </colgroup>
+        
+        <thead>
+            <tr>
+                <th>no</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>윤영찬</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>윤영찬</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>인원수</td>
+                <td style="text-align: right;">2명</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

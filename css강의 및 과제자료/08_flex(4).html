@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+</head>
+<body>
+    <h1>justify-content</h1>
+    <p>
+        가로축 정렬 <br>
+        1. flex-start : 시작 지점에 몰려서 간격 없이
+        2. flex-end : 끝 지점에 몰려서 간격 없이
+        3. center : 가운데 지점에 몰려서 간격 없이
+        4. space-between : 아이템들 사이 간격 일정하게
+        5. space-around : 아이템 둘레 간격이 일정하게
+        6. space-evenly : 아이템 사이와 양끝 간격 일정하게
+    </p>
+    <style>
+        .container{
+            background-color: cornsilk;
+            width: 500px; height: 200px;
+            display: flex; flex-flow : row wrap;
+        }
+        .item{
+            background-color: cornflowerblue;
+            margin: 10px; color: #fff;
+            height: 80px;
+        }
+        #flexStart{justify-content : flex-start;}
+        #flexEnd{justify-content: flex-end;}
+        #center{justify-content: center;}
+    </style>
+    <div class="container" id="flexStart">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="flexEnd">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="center">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <style>
+        #spaceBetween{justify-content : space-between;}
+        #spaceAround{justify-content: space-around;}
+        #spaceEvenly{justify-content: space-evenly;}
+    </style>
+    <div class="container" id="spaceBetween">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="spaceAround">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+    <div class="container" id="spaceEvenly">
+        <div class="item">10</div>
+        <div class="item">20</div>
+        <div class="item">30</div>
+    </div>
+</body>
+</html>

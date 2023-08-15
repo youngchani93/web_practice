@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>회원가입</h1>
+        </div>
+    </header>
+    <section>
+        <form name="JoinPage">
+            <fieldset>
+            <legend>필수 입력 사항</legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label for="user_id">ID</label>
+                            </th>
+                            <td>
+                                <input type="text" id="user_id" name="userId" placeholder="아이디 10글자 이내" maxlength="10"/>
+                            </td>
+                            <td>
+                                <input type="button" id="check_btn" name="checkName" value="중복 확인"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="user_pw">비밀번호</label>
+                            </th>
+                            <td>
+                                <input type="password" id="user_pw" name="userPw" placeholder="영문,숫자 포함 8자리 이상" minlength="8"/>   
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="user_pwCheck">비밀번호 확인</label>
+                            </th>
+                            <td>
+                                <input type="password" id="user_pwCheck" name="userPwCheck" minlength="8"/> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="user_email">Email</label>
+                            </th>
+                            <td>
+                                <input type="email" id="user_email" name="userEmail"/>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="-1" selected>선택</option>
+                                    <option value="1">gmail.com</option>
+                                    <option value="2">naver.com</option>
+                                    <option value="3">daum.net</option>
+                                    <option value="4">nate.com</option>                                    
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>추가 정보</legend>
+                <div>
+                    <!-- CSS영역으로 input태그의 CSS변환이 어려우므로 label을 묶음으로 하고(input태그를 숨긴다), 
+                    label태그에 CSS, Bootstrap 등을 입혀서 input태그가 실행되는 것처럼 보이게 한다. -->
+                    <label for="profile_img">프로필 사진:</label>
+                    <input type="file" id="profile_img" name="profileImage" accept="image/png, image/jpeg" />
+                </div>
+                <br>
+                <div>
+                    <span>성별 :</span>
+                    <input type="radio" id="male" name="gender"/>
+                    <label for="male">남자</label>
+                    <input type="radio" id="female" name="gender"/>
+                    <label for="female">여자</label>               
+                    <input type="radio" id="private" name="gender"/>
+                    <label for="private">공개안함</label>
+                </div>
+                <br>
+                <div>
+                    <span>생년월일 :</span>
+                    <input type="date" id="user_birth" name="userBirth"/>
+                </div>
+                <br>
+                <span>취미</span>
+                <div>
+                    <input type="checkbox" id="h_baseball" name="hobby"/>
+                    <label for="h_baseball">야구</label>
+                    <input type="checkbox" id="h_basketball" name="hobby"/>
+                    <label for="h_basketball">농구</label>
+                    <input type="checkbox" id="h_soccer" name="hobby"/>
+                    <label for="h_soccer">축구</label>
+                    <br>
+                    <input type="checkbox" id="h_study" name="hobby"/>
+                    <label for="h_basketball">공부</label>
+                    <input type="checkbox" id="h_liMusic" name="hobby"/>
+                    <label for="h_soccer">음악감상</label>
+                    <br>
+                    <input type="checkbox" id="h_etc" name="hobby"/>
+                    <label for="h_soccer">기타:</label>
+                    <input type="text" id="input_etc" name="input_memo" disabled/>
+                    <!-- <input type="text" id="input_etc" name="input_memo" readonly/> -->
+                </div>
+                <br>
+                <span>자기소개</span>
+                <div>
+                    <textarea name="intro_myself" rows="4" cols="45"></textarea>                            
+                </div>
+                <!-- <textarea name="intro_myself" rows="4" cols="45"></textarea>                -->
+            </fieldset>
+            <p>
+                <input type="submit" id="user_join" name="join" value="회원가입"/>
+                <input type="reset" id="user_reinput" name="reInput" value="다시입력"/>
+                <input type="button" id="return_toPage" name="returnDisplay" value="이전으로"/>
+            </p>
+        </form>
+    </section>
+    <!-- <footer>
+        
+    </footer> -->c
+    <script>
+        // e(Event)에 대한 정의를 하는 것, 일반 메소드, 변수 선언과 다른 JS선언문
+        document.querySelector('#h_etc').onchange = e =>{
+            const current_check = e.target.checked;
+            if(current_check === true){
+                document.querySelector('#input_etc').disabled = false;
+            }else{
+                document.querySelector('#input_etc').disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

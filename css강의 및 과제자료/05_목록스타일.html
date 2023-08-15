@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 스타일</title>
+    <style>
+        .ulstyle{
+            /* list-style-type: disc; */
+            /* list-style-type: circle; */
+            /* list-style-type: square; */
+            list-style-type: none;
+        }
+        .listimage{
+            /* 출력할 이미지를 크기에 맞춰서 사용해야한다. */
+            list-style-image: url('img/sponge_list.png');
+        }
+        .olstyle{
+            /* list-style-type : decimal; */
+            /* list-style-type:decimal-leading-zero; */
+            /* list-style-type: lower-roman; */
+            /* list-style-type:upper-roman; */
+            /* list-style-type: lower-alpha; */
+            list-style-type:upper-alpha;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ulstyle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQery</li>
+    </ul>
+    <ul class="listimage">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQery</li>
+    </ul>
+    <ol class="olstyle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQery</li>
+    </ol>
+    <style>
+        .listinside{
+            list-style-position: inside;
+        }
+    </style>
+    <ul class="listinside">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQery</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finalPractice01_answer</title>
+    <!-- CSS영역 -->
+    <style>
+        h1{text-align: center;}
+        li{margin:2%;}
+        li>label{display: inline-block; width: 15%;}
+        li>input{width: 50%;}
+        table{width: 100%;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML의 모든 것</h1>
+        <nav>
+            <table border="1">
+                <tr>
+                    <td>글자</td>
+                    <td>목록</td>
+                    <td>표</td>
+                    <td>영역</td>
+                    <td>멀티미디어</td>
+                    <td><a href="하이퍼링크태그.html" target="_blank">하이퍼링크</a></td>
+                    <td>폼태그</td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+    <section>
+        <form>
+            <ul>
+                <li>
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" name="user_name"/>
+                </li>
+                <li>
+                    <label for="userMail">이메일</label>
+                    <input type="email" id="userMail" name="user_email"/>
+                </li>
+                <li>
+                    <label for="userPW">비밀번호</label>
+                    <input type="password" id="userPW" name="user_pw"/>
+                </li>
+                <li>
+                    <label for="user_food">음식</label>
+                    <select id="user_food">
+                        <option value="1">한식</option>
+                        <option value="2">증식</option>
+                        <option value="3">일식</option>
+                        <option value="4">양식</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </section>
+    <footer>
+        <h1>@CopyRight gn</h1>
+    </footer>
+</body>
+</html>
